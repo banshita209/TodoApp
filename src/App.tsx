@@ -6,16 +6,7 @@ const TodoPage = React.lazy(() => import("./pages/todoPage"));
 import { TODOItem } from "./utils/models/todoItem";
 
 function App() {
-  const [todoList, setTodoList] = useState<TODOItem[]>([
-    // {
-    //   id: 1,
-    //   status: Status.NotStarted,
-    //   title: "Learn React",
-    //   description: "aaa",
-    //   targetCompletionDate: new Date(),
-    //   createdDateTime: new Date(),
-    // },
-  ]);
+  const [todoList, setTodoList] = useState<TODOItem[]>([]);
   useEffect(() => {
     let todoList = localStorage.getItem("todoList");
     console.log(todoList);
@@ -25,6 +16,7 @@ function App() {
   }, []);
   useEffect(() => {
     if (todoList.length > 0) {
+      console.log("updating");
       localStorage.setItem("todoList", JSON.stringify(todoList));
     }
   }, [todoList]);

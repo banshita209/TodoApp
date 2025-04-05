@@ -17,7 +17,7 @@ export default function AddTodo({ setShowAddTodoFlag }: AddTodoProps) {
 
   const addNewTask = () => {
     let newItem: TODOItem = {
-      id: todoList.length + 1,
+      id: todoList[todoList.length - 1].id + 1,
       title: newTodoItem!.title,
       description: newTodoItem!.description,
       createdDateTime: new Date(),

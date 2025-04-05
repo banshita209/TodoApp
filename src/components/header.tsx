@@ -1,13 +1,14 @@
-import { faList } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faList } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 type headerProps = {
-    title: string
-}
+  title: string;
+};
 export default function Header({ title }: headerProps) {
-    return (
-        <div className="flex justify-center font-bold text-4xl">
-            {title}<FontAwesomeIcon icon={faList} className="ml-2 my-auto" />
-        </div>
-    )
+  return (
+    <div className="flex justify-center font-bold text-4xl font-[DynaPuff] mt-4">
+      {title}
+      <FontAwesomeIcon icon={faList} className="ml-2 my-auto" />
+    </div>
+  );
 }
